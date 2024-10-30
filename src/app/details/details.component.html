@@ -1,0 +1,38 @@
+<article class="details-component">
+    <!-- Display the printer's image if available -->
+    <img *ngIf="housingLocation?.imageSrc" class="listing-photo" [src]="housingLocation?.imageSrc" alt="Photo of {{ housingLocation?.name }} printer">
+    
+    <section class="listing-description">
+      <h2 class="listing-heading">{{ housingLocation?.name }}</h2>
+      <!-- <p class="listing-category">{{ housingLocation?.type }} Multifunction Printer</p> -->
+    </section>
+
+    <section class="listing-features">
+      <h2 class="section-heading">Printer Specifications</h2>
+      <ul>
+        <li>Print Speed: {{ housingLocation?.specs?.printSpeed }}</li>
+        <li>Functions: {{ housingLocation?.functions?.join(', ') }}</li>
+        <li>Display: {{ housingLocation?.specs?.display || 'N/A' }}</li>
+        <li>Memory: {{ housingLocation?.specs?.memory || 'N/A' }}</li>
+        <!-- <li>Paper Support: {{ housingLocation?.paperSupport || 'N/A' }}</li> -->
+        <!-- <li>Network/Connectivity: {{ housingLocation?.connectivity || 'N/A' }}</li> -->
+        <!-- <li>Additional Features: {{ housingLocation?.additionalFeatures || 'N/A' }}</li> -->
+      </ul>
+    </section>
+
+    <section class="listing-apply">
+      <h2 class="section-heading">Inquire about this printer</h2>
+      <form [formGroup]="applyForm" (submit)="submitInquiry()">
+        <label for="first-name">First Name</label>
+        <input id="first-name" type="text" formControlName="firstName">
+
+        <label for="last-name">Last Name</label>
+        <input id="last-name" type="text" formControlName="lastName">
+
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email">
+        
+        <button type="submit" class="primary">Inquire Now</button>
+      </form>
+    </section>
+  </article>

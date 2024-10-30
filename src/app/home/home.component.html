@@ -1,0 +1,130 @@
+<!-- Home Component -->
+<section class="home">
+  <!-- Header -->
+  <header>
+    <h1>Toshiba Printers</h1>
+    <h2>Industry-leading partners, game-changing solutions</h2>
+    <p>
+      Toshiba is the world’s most trusted provider of industry-targeted
+      solutions that help increase the value of ideas and information.
+    </p>
+    <a href="/printers" class="btn-primary">View Our Printers</a>
+  </header>
+
+  <!-- Slideshow Background Images -->
+  <div class="slideshow">
+   <div>
+    <img src="https://toshibasa.co.za/wp-content/uploads/330AC_cta.webp" alt="Short Rental" />
+    <h3>Short Rental</h3>
+   </div>
+   <div>
+    <img src="https://toshibasa.co.za/wp-content/uploads/toshiba-estudio-409S-3.webp" alt="Long Rental" />
+    <h3>Long Rental</h3>
+   </div>
+    <!-- <img src="printer-image3.jpg" alt="Printer 3" /> -->
+  </div>
+
+  <!-- Highlights Section -->
+  <section class="highlights">
+    <div class="highlight">
+      <h3>Managed Print Experts</h3>
+      <p>
+        Our people bring innovative, real-world solutions to all your print
+        management needs.
+      </p>
+    </div>
+    <div class="highlight">
+      <h3>Award-Winning</h3>
+      <p>
+        Toshiba products and technology frequently win awards from top industry
+        and consumer organisations.
+      </p>
+    </div>
+    <div class="highlight">
+      <h3>Secure MFP</h3>
+      <p>
+        Toshiba prioritizes security for businesses by providing advanced
+        security features and programs.
+      </p>
+    </div>
+    <div class="highlight">
+      <h3>Committed to Quality</h3>
+      <p>
+        We offer unmatched service and guarantee with a simple and sincere
+        commitment to deliver expected quality.
+      </p>
+    </div>
+  </section>
+
+  <!-- Product Highlights -->
+  <section id="printers" class="product-highlights">
+    <h2>Our Most Popular Printers</h2>
+    <div class="homePrintersContent">
+      <div class="product" *ngFor="let product of products">
+        <img
+          *ngIf="product.image"
+          class="listing-photo-home"
+          [src]="product.image"
+          alt="Photo of {{ product.name }} printer"
+        />
+
+        <h4>{{ product.name }}</h4>
+        <p>{{ product.description }}</p>
+        <a [href]="product.link">View printer</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="cta">
+    <h2>Ready to transform your business?</h2>
+    <p>
+      Get the products, services, and solutions you need to thrive no matter
+      where the job—and the future—takes you.
+    </p>
+    <a href="/contact" class="btn-primary">Contact Us</a>
+  </section>
+</section>
+
+<!-- Footer Component -->
+<footer class="footer">
+  <div class="footer-info">
+    <img class="footerLogoImage" src="/assets/logo.png" alt="Toshiba Logo" />
+    <p>
+      We are the sole importer of Toshiba copiers, printers, and Duplo
+      duplicators.
+    </p>
+  </div>
+  <div class="footer-quick-menu">
+    <h4>Quick Menu</h4>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#videos">Videos</a></li>
+      <li><a href="#downloads">Download Printer Drivers</a></li>
+      <li><a href="/contact">Contact Us</a></li>
+      <li><a href="#privacy">Privacy Policy</a></li>
+    </ul>
+  </div>
+  <div class="footer-products">
+    <h4>Products</h4>
+    <ul>
+      <li><a href="#color-printers">Colour Printers</a></li>
+      <li><a href="#mono-printers">Monochrome Printers</a></li>
+      <li><a href="#duplicators">Duplicators</a></li>
+    </ul>
+  </div>
+  <div class="footer-contact">
+    <h4>Contact</h4>
+    <address>
+      3 Highview Blvd, Johannesburg, Gauteng, 2194<br />
+      060 905 2685<br />
+      <a href="mailto:raeezc@toshiba-sa.co.za">raeezc&#64;toshiba-sa.co.za</a>
+      <br />
+      <a href="mailto:service@toshiba-sa.co.za">service&#64;toshiba-sa.co.za</a>
+    </address>
+  </div>
+  <div class="footer-copyright">
+    <p>&copy; 2024 Toshiba. All rights reserved.</p>
+  </div>
+</footer>
